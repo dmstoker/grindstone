@@ -7,9 +7,45 @@
   
   /* Set neon color */
   --neon-text-color: #E3E85A;
-body {
-  background: image_url('dot-grid.png');
-    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+ 
+}
+
+
+
+ .place-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  padding-top: 0px;
+  }
+
+
+.booyah-box {
+  background-color: #FAFBFD;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+  padding-bottom: 30px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
+  }
+
+  body {
+  background: url('/assets/dot-grid.png');
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
 .navbar {
@@ -18,22 +54,92 @@ body {
 }
 
 .navbar-inverse .navbar-brand {
-  font-family: 'Open Sans Condensed', sans-serif;
+font-size:26px;
+color: #fff;
+font-family: 'fontspring_demo_-_intro_rusRg';
+text-transform: uppercase;
+animation: flicker 2.0s infinite alternate;  
 }
 
-.booyah-box {
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+
+
+
+
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.02rem -0.02rem .1rem #fff,
+            0.02rem 0.02rem .1rem #fff,
+            0 0 .2rem var(--neon-text-color),
+            0 0 .4rem var(--neon-text-color),
+            0 0 .6rem var(--neon-text-color),
+            0 0 .8rem var(--neon-text-color),
+            0 0 .10rem var(--neon-text-color);
+            
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        
+    }    
+}
+
+.pagination { 
   margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 20px;
+  text-align: center;
+  background: white;
+  cursor: default;
+  height: 24px;
+  display: block;
+  float: center;
+  margin-right: 1px;
+  
+  .disabled {
+    display: none;}
+  
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin:0;
-  padding:0;
+.button {
+  background-color: #718ab6; 
+  border-radius: 20px;
+  color: white;
+  padding: 8px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.button_delete {
+  background-color: #F3768D; 
+  border-radius: 20px;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+abbr[title="required"] {
+  display: none;
+}
+
+.invalid-feedback {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+}
+
+.clear {
+    clear: both;
+}
+
+.place_pic{
+object-fit: contain;
+max-height: 100px;
+
 }
