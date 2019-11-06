@@ -41,8 +41,70 @@
 
  </div>
  <br />
+
+</div>
+<div class="booyah-box col-10 offset-1">
+<h1 class="float-left">Comments</h1>
+<br />
+<br />
+<br />
+<div class="row">
+<% @place.comments.each do |comment| %>
+  <div class="col-12 col-sm-6">
+    <blockquote>
+      <% if comment.humanized_rating.present? %>
+        <b><%= comment.humanized_rating %></b> -
+      <% end %>
+      <%= comment.message %>
+      <small><%= comment.user.email %></small>
+    </blockquote>
+  </div>
+<% end %>
+</div>
+<button type="button" class="float-right button"  data-toggle="modal" data-target="#myModal"> 
+  Add a Comment <br />
+</button>
+<br />
+</div>
+<br />
+</div>
+<br /><br />
+<br /><br />
 </div>
 
 
 
- 
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Tell us what you think? </h4>
+      </div>
+   <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
+        <div class="modal-body">
+          <%= f.input :message %>
+          <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
+        
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="button_delete" data-dismiss="modal">Close</button>
+          <%= f.submit "Add a Comment", class: 'button' %>
+
+        </div>
+      </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<br /><br />
+<br /><br />
+<br />
+
+ </div>
