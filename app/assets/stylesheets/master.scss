@@ -102,21 +102,26 @@ animation: flicker 2.0s infinite alternate;
 }
 
 .button {
+  border-bottom: 20px;
+  border-left: 10px;
   background-color: #718ab6; 
   border-radius: 20px;
   color: white;
-  padding: 8px 24px;
+  padding: 8px
+   24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
 }
 
+
 .button_delete {
+  border-left: 10px;
   background-color: #F3768D; 
   border-radius: 20px;
   color: white;
-  padding: 10px 26px;
+  padding: 8px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -142,4 +147,11 @@ abbr[title="required"] {
 object-fit: contain;
 max-height: 100px;
 
+}
+
+.invalid-feedback {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
 }

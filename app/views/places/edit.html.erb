@@ -1,0 +1,11 @@
+<div class="booyah-box col-10 offset-1">
+<h1> Edit Your Place Details</h1>
+ <%= simple_form_for @place do |f| %>
+    <%= f.input :name %>
+     <%= f.input :address %>
+    <%= f.input :description %>
+    <br />
+    <%= f.submit 'Update' , class: 'button' %>
+     <%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'button_delete' %>
+  <% end %>
+</div>
