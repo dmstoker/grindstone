@@ -104,7 +104,65 @@
   </div>
 </div>
 <br /><br />
-<br /><br />
+
 <br />
+<div class="booyah-box col-10 offset-1"
+<% @place.photos.each do |photo| %>
+    <image><%= image_tag photo.picture.url.to_s%></image>
+      <caption>
+        <% if photo.caption.present? %>
+        <%= photo.caption %>
+        <% end %>
+      </caption>
+      <% end %>
+      <style>
+        .caption {
+          object-position: bottom; 
+        }
+      </style>
+
+
+
+
+<div class="float-right">
+<% if current_user %>
+<button type="button" class="button"  data-toggle="modal" data-target="#myModal1"> 
+  Add a Photo
+</button>
+<% end %>
+ 
+    </div>
+    
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+     
+        
+          <span aria-hidden="true">×</span>
+        </button>
+            
+      <div class="modal-body">
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+        <%= f.input :caption %>
+        <%= f.input :picture %>.
+        </div>
+
+
+
+        <div class="modal-footer">
+        
+        <button type="button" class="button_delete" data-dismiss="modal">Close</button>
+
+         <%= f.submit "Add a Photo", class: 'button' %>
+         <br /><br />
+         <% end %>   
+         
+
+   
+     
+
 
  </div>
