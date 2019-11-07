@@ -1,6 +1,7 @@
  <style>
-#rname{
+h1 {
     float: top-left;
+    color: #fff;
 }
 #pic{
     float: right;
@@ -8,11 +9,13 @@
     border-bottom: 10px;
     border-left: 0px
     border-right: 0px;
+    padding-left: 5px;
+  }
 
  
 </style>
 
-
+<body>
 
 
 
@@ -29,9 +32,9 @@
         
         <% end %>
       
-        <div id="rname">
+        
     <h1><%= link_to place.name, place_path(place) %></h1><br />
-        </div>
+        
     
     
     <i><%= place.address %></i><br /><br />
