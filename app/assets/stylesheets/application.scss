@@ -13,7 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+
 body {
   background: image_url('/assets/dot-grid.png');
+  
+}
+
+body {
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
