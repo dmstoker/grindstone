@@ -10,6 +10,11 @@
  
 }
 
+body {
+  background: image_url('/assets/dot-grid.png');
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
    #map {
       height: 300px;
     }
@@ -45,10 +50,7 @@
   padding:0;
   }
 
-  body {
-  background: url('/assets/dot-grid.png');
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-}
+  
 
 .navbar {
   background: image_url('cartographer.png');
