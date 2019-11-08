@@ -38,6 +38,12 @@ body {
   
 .navbar {
   background: image_url('bg3.jpeg');
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: cover;
+  width: cover;
   box-shadow: 0px 1px 3px #2a2a2a;
 }
 
