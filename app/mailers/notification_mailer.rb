@@ -1,13 +1,13 @@
 class NotificationMailer < ApplicationMailer
-  default from: "no-reply@nGrindingGrounds.com"
+  default from: "no-reply@Grindstone.com"
 
   def comment_added(comment)
-  @place = comment.place
-  @place_owner = @place.user
-  mail(to: @place_owner.email,
-       subject: "A comment has been added to your #{@place.name}")
+    @place = comment.place
+    @place_owner = @place.user
+    mail(to: @place_owner.email,
+         subject: "A comment has been added to #{@place.name}")
+  end
 end
 
-end
 
 
