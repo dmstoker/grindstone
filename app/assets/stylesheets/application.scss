@@ -41,12 +41,10 @@ font-size:26px;
 color: white;
 font-family: 'fontspring_demo_-_intro_rusRg';
 text-transform: uppercase;
-padding: 4px; 
+padding: 4px;  
 border: 4px solid #fff;
-border-animation: flicker 1s infinite alternate;
-animation: flicker 1s infinite alternate; 
-position: relative;
 padding-bottom: 4px; 
+animation: flicker 1.5s infinite alternate; 
 }
 
 
