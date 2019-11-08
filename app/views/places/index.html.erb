@@ -1,5 +1,6 @@
  <style>
 h1 {
+    font-size: 20px
     float: top-left;
     color: #fff;
 }
@@ -20,10 +21,11 @@ h1 {
 
 
  <%= will_paginate @places %> 
+<br /><br />
 <% @places.each do |place| %>
   
   <div class="container">
-    <div class="booyah-box col-12 sm-8" >
+    <div class="booyah-box col-12 sm-8 lg-12" >
     <% if place.photos.present? %>
         <div id="pic">
          <%= image_tag place.photos.last.picture.thumb.to_s %>
@@ -32,17 +34,15 @@ h1 {
         
         <% end %>
       
-        
+    <div class="col-6 sm-4 offset-1" > 
+    
     <h1><%= link_to place.name, place_path(place) %></h1><br />
-        
-    
-    
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
-
-      <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-     <% end %>
+    <% if place.user.present? %>
+    <small><%= place.user.email %></small>
+    <% end %>
+  </div>
 
     <% if place.comments.present? %>
     <div class="col-8">
@@ -51,7 +51,7 @@ h1 {
       <b><%= place.comments.last.humanized_rating %></b> -
     <% end %>
     <%= place.comments.last.message %>
-    <small><%= place.comments.last.user.email %></small>
+    <small>-<%= place.comments.last.user.email %></small>
     </blockquote>
 
 
