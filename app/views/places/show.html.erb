@@ -107,28 +107,29 @@
 <br />
 
 
-<div class="booyah-box col-10 offset-1">
-  <% @place.photos.each do |photo| %>
- <%= image_tag photo.picture.thumb.url.to_s%>
-    <br/>
-    <caption>
-    <% if photo.caption.present? %>
-      <%= photo.caption %>
-      <% end %>
-    </caption>
-      
-      
-      <% end %>
+<div class="booyah-box2 col-10 offset-1">
+<div class="row">
+ <% @place.photos.each do |photo| %>
+  <div class="col-4">
 
+      <%= image_tag photo.picture.thumb.url.to_s%>
+        <% if photo.caption.present? %>
+        <br />
+        <%= photo.caption %>
+        <% end %>
+         </div>
+    <% end %>
+  </div>
+  
 
-
-  <div class="float-right">
     <% if current_user %>
-    <button type="button" class="button"  data-toggle="modal" data-target="#myModal1"> 
+    <div class = "float-right">
+    <button type="button" class="button" data-toggle="modal" data-target="#myModal1"> 
     Add a Photo
     </button>
     <% end %>
   </div>
+  <br/>
 </div>
 
 
