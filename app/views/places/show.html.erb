@@ -6,7 +6,7 @@
 <p><%= @place.description %></p>
 
 
-<% if @place.latitude.present? && @place.longitude.present? %> 
+<% if @place.latitude.present? && @place.longitude.present? %>
   <script>
 
     function initMap() {
@@ -32,7 +32,7 @@
    <div id="map"></div>
    <% end %>
    <br />
-  
+
 <div class="float-right">
   <% if current_user && current_user == @place.user %>
   <%= link_to 'Edit', edit_place_path(@place), class: 'button' %>
@@ -63,7 +63,7 @@
   </div>
 <% end %>
 </div>
-<button type="button" class="float-right button"  data-toggle="modal" data-target="#myModal"> 
+<button type="button" class="float-right button"  data-toggle="modal" data-target="#myModal">
   Add a Comment <br />
 </button>
 <br />
@@ -88,7 +88,7 @@
         <div class="modal-body">
           <%= f.input :message %>
           <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
-        
+
 
         </div>
         <div class="modal-footer">
@@ -107,12 +107,12 @@
 <br />
 
 
-<div class="booyah-box2 col-10 offset-1">
+<div class="booyah-box2 col-10 sm-5 offset-1">
 <div class="row">
  <% @place.photos.each do |photo| %>
-  <div class="col-4">
 
-      <%= image_tag photo.picture.thumb.url.to_s%>
+  <div class="col-lg-3 col-md-4 col-sm-6" data-toggle="modal" data-target="#modal">
+    <%= image_tag photo.picture.thumb.url.to_s%>
         <% if photo.caption.present? %>
         <br />
         <%= photo.caption %>
@@ -120,11 +120,11 @@
          </div>
     <% end %>
   </div>
-  
+
 
     <% if current_user %>
     <div class = "float-right">
-    <button type="button" class="button" data-toggle="modal" data-target="#myModal1"> 
+    <button type="button" class="button" data-toggle="modal" data-target="#myModal1">
     Add a Photo
     </button>
     <% end %>
@@ -147,13 +147,13 @@
         </button>
         <h4 class="modal-title" id="myModalLabel">Add a Picture </h4>
       </div>
-   
+
    <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
         <div class="modal-body">
-         
+
         <%= f.input :caption %>
        <%= f.input :picture %>
-        
+
 
         </div>
         <div class="modal-footer">
@@ -169,14 +169,14 @@
 </div>
 
 
-     
 
-     
-         
-         
 
-   
-     
+
+
+
+
+
+
 
 
  </div>

@@ -22,7 +22,7 @@
 
 .booyah-box {
   background-color: #5A6067;
-  opacity:  .9; 
+  opacity:  .9;
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -40,7 +40,7 @@
 
   .booyah-box2 {
   background-color: #5A6067;
-  opacity:  .9; 
+  opacity:  .9;
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -61,21 +61,21 @@
   padding:0;
   }
 
- 
+
   .clear {
     clear: both;
 }
 
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
-  max-height: 550px;
+  height: 550px;
   max-width: 733px;
   margin-left: auto;
   margin-right: auto;
-  
-} 
 
-.carousel-item.active, 
-.carousel-item-next, 
+}
+
+.carousel-item.active,
+.carousel-item-next,
 .carousel-item-prev {
   display: block;
 }
@@ -89,7 +89,7 @@
   max-width: 733px;
   margin-left: auto;
   margin-right: auto;
-  
+
 }
 
 .carousel {
@@ -100,7 +100,7 @@
 }
 
 
-.pagination { 
+.pagination {
   margin-top: 10px;
   text-align: center;
   background: white;
@@ -109,17 +109,17 @@
   display: block;
   float: center;
   margin-right: 1px;
-  
+
   .disabled {
     display: none;}
-  
+
 }
 
 .button {
   border-bottom: 20px;
   border-left: 10px;
-  border-color: #718ab6; 
-  background-color: #718ab6; 
+  border-color: #718ab6;
+  background-color: #718ab6;
   border-radius: 20px;
   color: white;
   padding: 8px
@@ -133,7 +133,7 @@
 
 .button_delete {
   border-left: 10px;
-  background-color: #F3768D; 
+  background-color: #F3768D;
   border-radius: 20px;
   color: white;
   padding: 8px 24px;
@@ -171,5 +171,6 @@ max-height: 100px;
   padding: 2px 8px 2px 8px;
 }
 
-
-
+.user {
+  float: inherit;
+}
