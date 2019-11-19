@@ -47,7 +47,7 @@
     <div class="container">
       <div class="booyah-box">
         <% if place.photos.present? %>
-          <div class="float-right">
+          <div class="place-pic float-inline-end">
             <%= image_tag place.photos.last.picture.thumb.to_s %>
           </div>
           <br/>
@@ -55,13 +55,13 @@
 
         <% end %>
 
-        <div class="place-info col-4 col-sm-3">
+        <div class="container">
 
-          <h1><%= link_to place.name, place_path(place) %></h1><br/>
+          <h1><%= link_to place.name, place_path(place) %></h1>
           <i><%= place.address %></i><br/><br/>
-          <p><%= place.description %></p><br/>
+          <p><%= place.description %></p>
           <% if place.user.present? %>
-            <small><%= place.user.email %></small>
+            -<small><%= place.user.email %></small>
           <% end %>
         </div>
 
