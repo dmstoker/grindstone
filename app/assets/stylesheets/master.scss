@@ -1,13 +1,18 @@
 @import "bootstrap";
 @import "font-awesome";
 
+#map {
+  height: 300px;
+}
+@media only screen and (max-width: 600px) {
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
 
-
-   #map {
-      height: 300px;
-    }
-
- .place-box {
+.place-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -16,13 +21,12 @@
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: -10px;
   margin-bottom: 15px;
-  padding-top: 0px;
-  }
-
+  padding-top: 0;
+}
 
 .booyah-box {
   background-color: #5A6067;
-  opacity:  .9;
+  opacity: 0.9;
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -30,53 +34,53 @@
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: 10px;
   margin-bottom: 15px;
-  padding: 20px;
-  padding-bottom: 30px;
+  padding: 20px 20px 30px;
   text-align: center;
   text-orientation: left;
   color: white;
-
-  }
-
-  .booyah-box2 {
-  background-color: #5A6067;
-  opacity:  .9;
-  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-  box-shadow: 1px 1px 2px 0 #d0d0d0;
-  border: 1px solid #ccc;
-  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 10px;
-  padding-bottom: 30px;
-  text-align: center;
-  text-orientation: left;
-  color: white;
-
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-  margin:0;
-  padding:0;
-  }
-
-
-  .clear {
-    clear: both;
 }
 
-.carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
+.booyah-box2 {
+  background-color: #5A6067;
+  opacity: 0.9;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 10px 10px 30px;
+  text-align: center;
+  text-orientation: left;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.carousel-inner > .carousel-item > a > img,
+.carousel-inner > .carousel-item > img {
   height: 550px;
   max-width: 733px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
-.carousel-item.active,
 .carousel-item-next,
-.carousel-item-prev {
+.carousel-item-prev,
+.carousel-item.active {
   display: block;
 }
 
@@ -89,16 +93,14 @@
   max-width: 733px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .carousel {
-  box-shadow: 0px 3px 8px #2a2a2a;
+  box-shadow: 0 3px 8px #2a2a2a;
   max-width: 733px;
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .pagination {
   margin-top: 10px;
@@ -111,8 +113,8 @@
   margin-right: 1px;
 
   .disabled {
-    display: none;}
-
+    display: none;
+  }
 }
 
 .button {
@@ -122,14 +124,12 @@
   background-color: #718ab6;
   border-radius: 20px;
   color: white;
-  padding: 8px
-   24px;
+  padding: 8px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
 }
-
 
 .button_delete {
   border-left: 10px;
@@ -151,24 +151,23 @@ abbr[title="required"] {
   color: #ff3333;
   background-color: #FFEEEE;
   border-radius: 3px;
-  padding: 2px 8px 2px 8px;
+  padding: 2px 8px;
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
-.place_pic{
-object-fit: contain;
-max-height: 100px;
-
+.place_pic {
+  object-fit: contain;
+  max-height: 100px;
 }
 
 .invalid-feedback {
   color: #ff3333;
   background-color: #FFEEEE;
   border-radius: 3px;
-  padding: 2px 8px 2px 8px;
+  padding: 2px 8px;
 }
 
 .user {
