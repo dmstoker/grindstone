@@ -45,7 +45,7 @@
   <% @places.each do |place| %>
 
     <div class="container">
-      <div class="booyah-box col-12 sm-8 lg-12">
+      <div class="booyah-box">
         <% if place.photos.present? %>
           <div class="float-right">
             <%= image_tag place.photos.last.picture.thumb.to_s %>
